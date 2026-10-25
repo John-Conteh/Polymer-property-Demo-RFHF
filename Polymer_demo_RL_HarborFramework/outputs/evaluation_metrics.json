@@ -1,0 +1,93 @@
+{
+  "dataset": "synthetic_polyurethane_urea.csv",
+  "n_samples": 600,
+  "split": {
+    "train": 480,
+    "test": 120,
+    "test_fraction": 0.2,
+    "random_seed": 42
+  },
+  "model": {
+    "name": "standardized_ridge_regression",
+    "alpha": 1.0,
+    "target": "tensile_strength_MPa",
+    "features": [
+      "hard_segment_wt_pct",
+      "urea_fraction_pct",
+      "nco_index",
+      "soft_segment_MW",
+      "post_cure_hours",
+      "relative_humidity_pct",
+      "ftir_amide_I_peak_cm1",
+      "ftir_amide_II_peak_cm1",
+      "ftir_NH_stretch_peak_cm1",
+      "ftir_carbonyl_relative_intensity",
+      "ftir_NH_relative_intensity",
+      "ftir_ether_relative_intensity"
+    ]
+  },
+  "test_metrics": {
+    "n": 120,
+    "mae_MPa": 3.117049072714178,
+    "rmse_MPa": 3.932533080741018,
+    "r2": 0.7593884152259662
+  },
+  "descriptive_statistics": {
+    "ftir_amide_I_peak_cm1": {
+      "mean": 1697.5036666666665,
+      "std": 6.656574686395061,
+      "min": 1680.4,
+      "max": 1714.6
+    },
+    "ftir_amide_II_peak_cm1": {
+      "mean": 1544.7368333333334,
+      "std": 4.409934992592169,
+      "min": 1532.4,
+      "max": 1557.1
+    },
+    "ftir_NH_stretch_peak_cm1": {
+      "mean": 3317.931,
+      "std": 17.196211956901056,
+      "min": 3270.4,
+      "max": 3365.2
+    },
+    "ftir_carbonyl_relative_intensity": {
+      "mean": 0.8657016666666667,
+      "std": 0.15310269755044234,
+      "min": 0.427,
+      "max": 1.298
+    },
+    "ftir_NH_relative_intensity": {
+      "mean": 0.61291,
+      "std": 0.13610604407348462,
+      "min": 0.217,
+      "max": 0.952
+    },
+    "ftir_ether_relative_intensity": {
+      "mean": 0.5263633333333333,
+      "std": 0.12344950920203053,
+      "min": 0.214,
+      "max": 0.811
+    },
+    "tensile_strength_MPa": {
+      "mean": 39.62583333333333,
+      "std": 7.849493824798867,
+      "min": 14.15,
+      "max": 69.18
+    },
+    "elongation_at_break_pct": {
+      "mean": 318.13,
+      "std": 83.8841351706825,
+      "min": 81.8,
+      "max": 551.2
+    },
+    "Youngs_modulus_MPa": {
+      "mean": 27.720183333333335,
+      "std": 4.116056948065979,
+      "min": 15.87,
+      "max": 38.56
+    }
+  },
+  "prediction_file": "outputs\\predictions.csv",
+  "generated_at_utc": "2026-10-25T17:19:34.754466+00:00"
+}
